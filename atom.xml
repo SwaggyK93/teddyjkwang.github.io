@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-12-25T15:48:39.891Z</updated>
+  <updated>2021-12-31T06:54:44.159Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,78 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>推荐系统中的Transformer</title>
+    <link href="http://example.com/posts/fd247086/"/>
+    <id>http://example.com/posts/fd247086/</id>
+    <published>2021-12-30T11:36:24.000Z</published>
+    <updated>2021-12-31T06:54:44.159Z</updated>
+    
+    <content type="html"><![CDATA[<p>Transformer基础论文：Attention is all you need</p><p>AutoInt：这个不知道算不算，主要是CIN结构，用于精排</p><h3 id="序列推荐模型"><a href="#序列推荐模型" class="headerlink" title="序列推荐模型"></a>序列推荐模型</h3><p>主要致力捕捉和解决用户随时间变化的、动态的偏好</p><h2 id="1-SASRec"><a href="#1-SASRec" class="headerlink" title="1. SASRec"></a>1. SASRec</h2><p> <a href="https://arxiv.org/pdf/1808.09781.pdf">Self-Attentive Sequential Recommendation</a>  2018 ICDM会议论文，用于召回</p><blockquote><p>一些复现方式：<a href="https://github.com/kang205/SASRec">https://github.com/kang205/SASRec</a></p><p>对文章的解读：</p></blockquote><p>SASRec是Transformer结构在推荐中的一次探索 ，采用Self-attention 对用户历史行为建模，最后将得到的信息分别和所有物品embedding做内积，并进行相关性大小排序、筛选，得到topk。</p><p><img src="/posts/fd247086/SASRec结构图.png" alt></p><h2 id="2-DIN"><a href="#2-DIN" class="headerlink" title="2.DIN"></a>2.DIN</h2><p>Deep Interest Network for Click-Through Rate Prediction </p><h2 id="3-DIEN"><a href="#3-DIEN" class="headerlink" title="3.DIEN"></a>3.DIEN</h2><p>Deep Interest Evolution Network for Click-Through Rate Prediction </p><h2 id="4-BERT4Rec"><a href="#4-BERT4Rec" class="headerlink" title="4.BERT4Rec"></a>4.BERT4Rec</h2><p>Sequential Recommendation with Bidirectional Encoder Representations from Transformer</p><h2 id="5-BST"><a href="#5-BST" class="headerlink" title="5.BST"></a>5.BST</h2><p> <a href="https://arxiv.org/pdf/1905.06874.pdf%C2%A0">Behavior sequence transformer for e-commerce recommendation in Alibaba</a> </p><h2 id="6-MIND："><a href="#6-MIND：" class="headerlink" title="6.MIND："></a>6.MIND：</h2><p>Multi-Interest Network with Dynamic Routing for Recommendation at Tmall</p><h2 id="7-DSIN"><a href="#7-DSIN" class="headerlink" title="7.DSIN"></a>7.DSIN</h2><p>Deep Session Interest Network for Click-Through Rate Prediction</p><h2 id="8-SIM："><a href="#8-SIM：" class="headerlink" title="8.SIM："></a>8.SIM：</h2><p>Search-based User Interest Modeling with Lifelong Sequential Behavior Data for Click-Through Rate Prediction</p><h2 id="9-DMT："><a href="#9-DMT：" class="headerlink" title="9.DMT："></a>9.DMT：</h2><p>Deep Multifaceted Transformers for Multi-objective Ranking in Large-Scale E-commerce Recommender Systems</p><h2 id="10-ComiRec："><a href="#10-ComiRec：" class="headerlink" title="10.ComiRec："></a>10.ComiRec：</h2><p>Controllable Multi-Interest Framework for Recommendation</p><p>Transformer变种：</p><p>Reformer <a href="https://arxiv.org/pdf/2001.04451v1.pdf">Reformer: The Efficient Transformer</a></p><p>Informer <a href="https://arxiv.org/pdf/2012.07436v2.pdf">Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Transformer基础论文：Attention is all you need&lt;/p&gt;
+&lt;p&gt;AutoInt：这个不知道算不算，主要是CIN结构，用于精排&lt;/p&gt;
+&lt;h3 id=&quot;序列推荐模型&quot;&gt;&lt;a href=&quot;#序列推荐模型&quot; class=&quot;headerlink&quot; </summary>
+      
+    
+    
+    
+    
+    <category term="序列推荐" scheme="http://example.com/tags/%E5%BA%8F%E5%88%97%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="Transformer" scheme="http://example.com/tags/Transformer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>美团A Dual Augmented Two-tower Model for Online Large-scale Recommendation</title>
+    <link href="http://example.com/posts/f4956924/"/>
+    <id>http://example.com/posts/f4956924/</id>
+    <published>2021-12-29T16:22:30.000Z</published>
+    <updated>2021-12-29T08:22:30.108Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>阿里天猫MIND Multi-Interest Network with Dynamic Routing</title>
+    <link href="http://example.com/posts/2c8d9534/"/>
+    <id>http://example.com/posts/2c8d9534/</id>
+    <published>2021-12-28T21:05:23.000Z</published>
+    <updated>2021-12-29T08:20:57.878Z</updated>
+    
+    <content type="html"><![CDATA[<p>过去的深度模型大多把用户特征或物品特征，表示成一个vector，这种方式没办法准确表示用户不同的兴趣。MIND用多个向量来表征用户的不同兴趣。基于Dynamic routing的想法，设计了multi-interest extractor layer的结构，发掘用户的不同兴趣，并表征成不同向量，然后再经过一些前馈层转化成用户的不同特征。</p><p>MIND论文的创新点：</p><p><strong>1.</strong> 通过Mulit-Interest Extractor Layer 获取User的多个兴趣向量表达。提出了具有动态路由特点的多兴趣网络，利用Dynamic Routing以自适应地聚合User历史行为到User兴趣表达向量中；</p><p><strong>2.</strong> 通过Label-Aware Attention 标签感知注意力机制，指导学习User的多兴趣表达Embedding；</p><p><img src="/posts/2c8d9534/MIND结构.png" alt></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;过去的深度模型大多把用户特征或物品特征，表示成一个vector，这种方式没办法准确表示用户不同的兴趣。MIND用多个向量来表征用户的不同兴趣。基于Dynamic routing的想法，设计了multi-interest extractor layer的结构，发掘用户的不同兴</summary>
+      
+    
+    
+    
+    
+    <category term="推荐系统" scheme="http://example.com/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="召回" scheme="http://example.com/tags/%E5%8F%AC%E5%9B%9E/"/>
+    
+    <category term="多兴趣" scheme="http://example.com/tags/%E5%A4%9A%E5%85%B4%E8%B6%A3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>推荐系统中的召回</title>
     <link href="http://example.com/posts/44f47eeb/"/>
     <id>http://example.com/posts/44f47eeb/</id>
     <published>2021-12-24T11:09:07.000Z</published>
-    <updated>2021-12-25T15:48:39.891Z</updated>
+    <updated>2021-12-26T16:57:48.594Z</updated>
     
-    <content type="html"><![CDATA[<p>李航、何向南老师的这篇文章《<a href="https://gsai.ruc.edu.cn/uploads/20210701/74fa9572b1a1b5131271df0021435052.pdf">Deep learning for matching in search and Recommendation</a>》是召回（matching）领域的一篇非常好的综述。有兴趣的同学可以下载下来好好读一读。本文借着这篇文章的梳理思路（对英文原文的翻译和理解），来展开学习一下推荐系统中召回领域的发展脉络。</p><span id="more"></span><h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>召回（matching）是指一个query对于一篇文档document的相关性（搜索领域定义），或是一个用户对于一个物品的感兴趣程度（推荐领域定义）。在搜索和推荐领域，召回都是一个关键和重要的问题。基于机器学习技术，我们可以根据输入特征表示和有标签的数据，来学习一个召回函数（matching function），这种方式被称为”learning to match”。近年来，使用深度学习技术在搜推领域的工作越来越多。背靠着海量数据和强大算力、以及逐步壮大的深度学习新技术，使用深度学习技术做召回已经成为了搜推领域的SOTA，这其中的关键是深度学习技术对于query、document、user、item、context等类的特征强大的表达和泛化能力。</p><p>本综述首先以一个统一的视角，全面系统的总结了搜推领域的深度召回模型，让我们可以在统一的架构下审视两个不同场景中的问题；其次，本综述将深度召回模型方案分成两类：表示学习（representation learning）和召回函数学习（matching function learning）。</p><p>最后，召回问题不限于搜推领域。相关问题也会出现在paraphrasing、QA、图像标注等。综述中介绍的方法能泛化成两个空间物体中的匹配问题。</p><p>每章的内容概况：</p><p>第一章：对搜索领域和推荐领域的基本情况进行介绍，对比两个领域的异同，说明两个领域分别的难点。并说明此篇综述不同于以往文章的原因</p><p>第二章：对传统机器学习的介绍</p><p>第三章：对深度学习介绍</p><p>第四章：搜索领域中的深度召回模型介绍</p><p>第五章：推荐领域中的深度召回模型介绍（本文重点剖析）</p><p>第六章：总结与展望</p><h1 id="Chapter-1-介绍"><a href="#Chapter-1-介绍" class="headerlink" title="Chapter 1 介绍"></a>Chapter 1 介绍</h1><h2 id="1-1-搜索和推荐"><a href="#1-1-搜索和推荐" class="headerlink" title="1.1 搜索和推荐"></a><del>1.1</del> 搜索和推荐</h2><p>搜索和推荐是当今两种信息获取的范式，被应用在许多场景中。比如抖音、微博，都有着自己推荐和搜索的场景，用户也经常使用这两种方式来获取信息。对互联网从业者来说，这里面至关重要的一个问题就是，在正确的时间、地点、上下文场景中，在巨大的内容池中，提供给用户他们感兴趣且相关的、需要的内容。</p><p>下面两幅图比较好的说明了搜索和推荐的区别</p><p>搜索：</p><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">有<span class="keyword">query</span>：搜索框中输入的关键词（列表）</span><br><span class="line">搜索中最基本的机制是pull，即从用户侧获取明确的<span class="keyword">query</span>需求</span><br><span class="line">用户的需求得到满足，Beneficiary（受益人）是用户</span><br><span class="line">随机性（Serendipity）相对比较小，搜索系统返回的结果必须比较相关</span><br></pre></td></tr></table></figure><p>推荐：</p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">没有query的概念，推荐系统需要理解用户画像、历史行为等，将信息推荐给用户</span><br><span class="line">最基本的操作机制就是<span class="keyword">push</span>，给用户推荐一些他们并没有明确指定的信息</span><br><span class="line">受益人是用户（获得感兴趣的信息）和平台（获得流量收益）</span><br><span class="line">推荐系统是允许提供给用户一些意料之外的信息的（但要有用）</span><br></pre></td></tr></table></figure><p><img src="/posts/44f47eeb/搜索推荐区别表.png" alt></p><p><img src="/posts/44f47eeb/搜索推荐统一视角.png" alt></p><h1 id="Chapter-5-推荐领域的深度召回模型"><a href="#Chapter-5-推荐领域的深度召回模型" class="headerlink" title="Chapter 5 推荐领域的深度召回模型"></a>Chapter 5 推荐领域的深度召回模型</h1><blockquote><p>深度学习用于推荐召回，主要可以分为两类：</p><ul><li><p>表示学习（Methods of representation learning）</p><p>深度网络用来编码用户和物品的向量表示，并让他们进行比较，得出一个最终的匹配分数</p></li><li><p>召回函数学习 (Methods of matching function learning)</p><p>深度学习用来做用户、物品、（上下文）等信息的交叉，来产生召回信号，并把它们相加，得到最终的匹配分数</p></li></ul></blockquote><h2 id="5-1-基于表示学习的召回模型"><a href="#5-1-基于表示学习的召回模型" class="headerlink" title="5.1 基于表示学习的召回模型"></a>5.1 基于表示学习的召回模型</h2><p>下图是搜索系统的表示学习的召回模型，作为类比，query等价于推荐系统中的user，document等价于推荐系统中的item。原始输入的user和item分别在不同的表示空间，分别经过一个神经网络结构之后，分别映射到相同空间下的 user representation和item representation。定义user特征为u，item特征为i，基于表示学习的召回模型的表达式可以定义为：</p><script type="math/tex; mode=display">f(u,i)=F(\phi_u(u),\phi_i(i))</script><p>其中 <script type="math/tex">F</script>是相同空间下的相似度量函数，比如内积、或者cosine函数。针对user和item输入数据，主要分为四种输入数据和其对应的处理方式：</p><p>1.unordered interactions（用user在系统中的无序交互特征，比如深度MF、auto-encoder类模型）</p><p>2.序列特征（处理序列特征，比如RNN类或CNN类模型）</p><p>3.多模态特征（user/item 属性、文本、图像）</p><p>4.linked graph（user-item graph 或 知识图谱）</p><p><img src="/posts/44f47eeb/基于表示学习的召回模型.png" alt></p>]]></content>
+    <content type="html"><![CDATA[<p>李航、何向南老师的这篇文章《<a href="https://gsai.ruc.edu.cn/uploads/20210701/74fa9572b1a1b5131271df0021435052.pdf">Deep learning for matching in search and Recommendation</a>》是召回（matching）领域的一篇非常好的综述。有兴趣的同学可以下载下来好好读一读。本文借着这篇文章的梳理思路（对英文原文的翻译和理解），来展开学习一下推荐系统中召回领域的发展脉络。</p><span id="more"></span><h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>召回（matching）是指一个query对于一篇文档document的相关性（搜索领域定义），或是一个用户对于一个物品的感兴趣程度（推荐领域定义）。在搜索和推荐领域，召回都是一个关键和重要的问题。基于机器学习技术，我们可以根据输入特征表示和有标签的数据，来学习一个召回函数（matching function），这种方式被称为”learning to match”。近年来，使用深度学习技术在搜推领域的工作越来越多。背靠着海量数据和强大算力、以及逐步壮大的深度学习新技术，使用深度学习技术做召回已经成为了搜推领域的SOTA，这其中的关键是深度学习技术对于query、document、user、item、context等类的特征强大的表达和泛化能力。</p><p>本综述首先以一个统一的视角，全面系统的总结了搜推领域的深度召回模型，让我们可以在统一的架构下审视两个不同场景中的问题；其次，本综述将深度召回模型方案分成两类：表示学习（representation learning）和召回函数学习（matching function learning）。</p><p>最后，召回问题不限于搜推领域。相关问题也会出现在paraphrasing、QA、图像标注等。综述中介绍的方法能泛化成两个空间物体中的匹配问题。</p><p>每章的内容概况：</p><p>第一章：对搜索领域和推荐领域的基本情况进行介绍，对比两个领域的异同，说明两个领域分别的难点。并说明此篇综述不同于以往文章的原因</p><p>第二章：对传统机器学习的介绍</p><p>第三章：对深度学习介绍</p><p>第四章：搜索领域中的深度召回模型介绍</p><p>第五章：推荐领域中的深度召回模型介绍（本文重点剖析）</p><p>第六章：总结与展望</p><h1 id="Chapter-1-介绍"><a href="#Chapter-1-介绍" class="headerlink" title="Chapter 1 介绍"></a>Chapter 1 介绍</h1><h2 id="1-1-搜索和推荐"><a href="#1-1-搜索和推荐" class="headerlink" title="1.1 搜索和推荐"></a><del>1.1</del> 搜索和推荐</h2><p>搜索和推荐是当今两种信息获取的范式，被应用在许多场景中。比如抖音、微博，都有着自己推荐和搜索的场景，用户也经常使用这两种方式来获取信息。对互联网从业者来说，这里面至关重要的一个问题就是，在正确的时间、地点、上下文场景中，在巨大的内容池中，提供给用户他们感兴趣且相关的、需要的内容。</p><p>下面两幅图比较好的说明了搜索和推荐的区别</p><p>搜索：</p><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">有<span class="keyword">query</span>：搜索框中输入的关键词（列表）</span><br><span class="line">搜索中最基本的机制是pull，即从用户侧获取明确的<span class="keyword">query</span>需求</span><br><span class="line">用户的需求得到满足，Beneficiary（受益人）是用户</span><br><span class="line">随机性（Serendipity）相对比较小，搜索系统返回的结果必须比较相关</span><br></pre></td></tr></table></figure><p>推荐：</p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">没有query的概念，推荐系统需要理解用户画像、历史行为等，将信息推荐给用户</span><br><span class="line">最基本的操作机制就是<span class="keyword">push</span>，给用户推荐一些他们并没有明确指定的信息</span><br><span class="line">受益人是用户（获得感兴趣的信息）和平台（获得流量收益）</span><br><span class="line">推荐系统是允许提供给用户一些意料之外的信息的（但要有用）</span><br></pre></td></tr></table></figure><p><img src="/posts/44f47eeb/搜索推荐区别表.png" alt></p><p><img src="/posts/44f47eeb/搜索推荐统一视角.png" alt></p><h1 id="Chapter-5-推荐领域的深度召回模型"><a href="#Chapter-5-推荐领域的深度召回模型" class="headerlink" title="Chapter 5 推荐领域的深度召回模型"></a>Chapter 5 推荐领域的深度召回模型</h1><blockquote><p>深度学习用于推荐召回，主要可以分为两类：</p><ul><li><p>表示学习（Methods of representation learning）</p><p>深度网络用来编码用户和物品的向量表示，并让他们进行比较，得出一个最终的匹配分数</p></li><li><p>召回函数学习 (Methods of matching function learning)</p><p>深度学习用来做用户、物品、（上下文）等信息的交叉，来产生召回信号，并把它们相加，得到最终的匹配分数</p></li></ul></blockquote><h2 id="5-1-基于表示学习的召回模型"><a href="#5-1-基于表示学习的召回模型" class="headerlink" title="5.1 基于表示学习的召回模型"></a>5.1 基于表示学习的召回模型</h2><p>下图是搜索系统的表示学习的召回模型，作为类比，query等价于推荐系统中的user，document等价于推荐系统中的item。原始输入的user和item分别在不同的表示空间，分别经过一个神经网络结构之后，分别映射到相同空间下的 user representation和item representation。定义user特征为u，item特征为i，基于表示学习的召回模型的表达式可以定义为：</p><script type="math/tex; mode=display">f(u,i)=F(\phi_u(u),\phi_i(i))</script><p>其中 <script type="math/tex">F</script>是相同空间下的相似度量函数，比如内积、或者cosine函数。针对user和item输入数据，主要分为四种输入数据和其对应的处理方式：</p><p>1.unordered interactions（user在系统中对item的无序交互特征，比如深度MF、auto-encoder类模型）</p><p>2.序列特征（处理序列特征，比如RNN类或CNN类模型）</p><p>3.多模态特征（user/item 属性、文本、图像）</p><p>4.linked graph（user-item graph 或 知识图谱）</p><p><img src="/posts/44f47eeb/基于表示学习的召回模型.png" alt></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;李航、何向南老师的这篇文章《&lt;a href=&quot;https://gsai.ruc.edu.cn/uploads/20210701/74fa9572b1a1b5131271df0021435052.pdf&quot;&gt;Deep learning for matching in search and Recommendation&lt;/a&gt;》是召回（matching）领域的一篇非常好的综述。有兴趣的同学可以下载下来好好读一读。本文借着这篇文章的梳理思路（对英文原文的翻译和理解），来展开学习一下推荐系统中召回领域的发展脉络。&lt;/p&gt;</summary>
